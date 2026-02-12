@@ -105,3 +105,6 @@ coverage/
 .pytest_cache/
 .cache/
 
+# Ignore disk images
+*.iso
+
