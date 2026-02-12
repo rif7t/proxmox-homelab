@@ -4,7 +4,7 @@ metadata:
   name: pm-homelab-root-api
   namespace: argocd
 spec:
-  project: default
+  project: management
   source:
     repoURL: https://github.com/rif7t/proxmox-homelab.git
     targetRevision: HEAD
@@ -16,8 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  ignoreDifferences:
-  - group: apiextensions.k8s.io
-    kind: CustomResourceDefinition
-    jsonPointers:
-    - /spec/versions

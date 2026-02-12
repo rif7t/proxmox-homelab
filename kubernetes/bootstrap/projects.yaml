@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: management
+  namespace: argocd
+spec:
+  description: Project for infrastructure and observability tools
+  sourceRepos:
+  - 'https://github.com/rif7t/proxmox-homelab.git'
+  destinations:
+  - namespace: '*' 
+    server: https://kubernetes.default.svc

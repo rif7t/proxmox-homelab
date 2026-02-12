@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-ingress-controller-api
+  name: platform-api
   namespace: argocd
 spec:
-  project: default
+  project: management
   source:
     repoURL: https://github.com/rif7t/proxmox-homelab.git
     targetRevision: HEAD
-    path: kubernetes/platform/nginx-ingress
+    path: kubernetes/platform/nginx
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -16,8 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  ignoreDifferences:
-  - group: apiextensions.k8s.io
-    kind: CustomResourceDefinition
-    jsonPointers:
-    - /spec/versions
