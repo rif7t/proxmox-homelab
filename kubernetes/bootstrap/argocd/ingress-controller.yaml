@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/rif7t/proxmox-homelab.git
     targetRevision: HEAD
-    path: .
+    path: kubernetes/platform/nginx-ingress
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
