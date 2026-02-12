@@ -4,7 +4,7 @@ metadata:
   name: homelab-gitops-api
   namespace: argocd
 spec:
-  project: proxmox-homelab
+  project: default
   source:
     repoURL: https://github.com/rif7t/proxmox-homelab.git
     targetRevision: HEAD
@@ -16,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
