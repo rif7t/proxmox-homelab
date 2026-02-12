@@ -1,0 +1,107 @@
+# General
+# Ignore system files, editors, build artifacts, and common sensitive files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+
+# macOS Finder database
+.AppleDouble
+
+# Logs and temp files
+*.log
+*.tmp
+tmp/
+temp/
+node_modules/
+dist/
+build/
+out/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+.envrc
+.python-version
+.pytest_cache/
+
+# Go
+bin/
+
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+terraform.tfvars
+terraform.tfvars.json
+# Keep .terraform.lock.hcl tracked (recommended) — remove above line if you prefer ignoring it
+
+# Ignore Terraform state and caches in submodules/modules
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.backup
+
+# Kubernetes / kubeconfig
+.kube/
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+
+# Talos and cluster config (sensitive/generated files)
+talosconfig
+kubeconfig
+
+# Helm
+*.tgz
+charts/*/charts/
+
+# Secrets, keys, certs
+*.pem
+*.key
+*.crt
+*.p12
+id_rsa
+id_rsa.pub
+secrets.yaml
+*.secret
+
+# IDE & build artifacts
+*.class
+*.jar
+*.war
+
+# Misc
+coverage/
+.pytest_cache/
+.cache/
+
