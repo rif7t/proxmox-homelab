@@ -1,0 +1,7 @@
+machine:
+  install:
+    disk: /dev/vda
+  
+  features:
+    qemu-agent:
+      enabled: true

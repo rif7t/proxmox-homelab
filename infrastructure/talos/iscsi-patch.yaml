@@ -1,0 +1,4 @@
+machine:
+  service:
+    iscsid:
+      enabled: true
