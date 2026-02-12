@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: homelab-gitops-api
+  name: pm-homelab-gitops-api
   namespace: argocd
 spec:
   project: default
