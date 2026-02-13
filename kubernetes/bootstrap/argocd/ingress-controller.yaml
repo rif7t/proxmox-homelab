@@ -27,12 +27,31 @@ spec:
     - /spec/ports
     - /spec/ports/0/nodePort
     - /spec/ports/1/nodePort
+  # Broaden CRD ignore: trust cluster state for CRD spec; ignore metadata annotations and status
   - group: apiextensions.k8s.io
     kind: CustomResourceDefinition
     jsonPointers:
-    - /spec/names
-    - /spec/scope
-    - /spec/versions
+    - /spec  # Ignore entire spec; cluster-managed CRD definitions take precedence
+    - /metadata/annotations  # Ignore annotations added/modified by controllers
+    - /status  # Ignore status fields updated at runtime
+  # Ignore differences for all CRDs deployed by this chart
+  - group: nginx.org
+    kind: VirtualServer
+    jsonPointers:
+    - /metadata/annotations
     - /status
-    - /spec/versions/0/served
-    - /spec/versions/0/storage
+  - group: nginx.org
+    kind: VirtualServerRoute
+    jsonPointers:
+    - /metadata/annotations
+    - /status
+  - group: appprotect.f5.com
+    kind: APPolicy
+    jsonPointers:
+    - /metadata/annotations
+    - /status
+  - group: appprotect.f5.com
+    kind: APLogConf
+    jsonPointers:
+    - /metadata/annotations
+    - /status
