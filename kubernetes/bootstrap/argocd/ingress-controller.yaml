@@ -24,10 +24,15 @@ spec:
   - group: ""
     kind: Service
     jsonPointers:
+    - /spec/ports
     - /spec/ports/0/nodePort
     - /spec/ports/1/nodePort
   - group: apiextensions.k8s.io
     kind: CustomResourceDefinition
     jsonPointers:
+    - /spec/names
+    - /spec/scope
+    - /spec/versions
+    - /status
     - /spec/versions/0/served
     - /spec/versions/0/storage
